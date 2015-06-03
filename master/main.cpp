@@ -3,7 +3,7 @@
 
 
 #include "configuration.h"
-#include "MacTableDaemon.h"
+#include "Daemon.h"
 
 
 int main(int argc, char** argv)
