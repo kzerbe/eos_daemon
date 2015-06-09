@@ -5,7 +5,7 @@
 
 using namespace OpenFlow;
 
-Worker::Worker(eos::sdk& sdk, MacTableDaemon* parent, int fd)
+Worker::Worker(eos::sdk& sdk, Daemon* parent, int fd)
     : SessionHandler(MaxBufferSize)
     , eos::timeout_handler(sdk.get_timeout_mgr())
     , m_t("Worker")

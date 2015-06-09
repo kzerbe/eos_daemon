@@ -8,12 +8,12 @@
 #include "io/SessionHandler.h"
 #include "lib/openFlow1_0/OpenFlowHeader.h"
 
-class MacTableDaemon;
+class Daemon;
 
 class Worker : public SessionHandler, public eos::timeout_handler
 {
     public:
-        Worker(eos::sdk& sdk, MacTableDaemon* parent, int fd);
+        Worker(eos::sdk& sdk, Daemon* parent, int fd);
         virtual ~Worker();
 
         // SessionHandler implementation
@@ -27,7 +27,7 @@ class Worker : public SessionHandler, public eos::timeout_handler
     private:
         void SendHello();
         eos::tracer m_t;
-        MacTableDaemon* m_parent;
+        Daemon* m_parent;
         OpenFlow::ConnectState m_state;
         int m_fd;
 };

@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
 <CodeBlocks_layout_file>
 	<ActiveTarget name="Release" />
+	<File name="../../../../DirectFlowProgrammer.cpp" open="0" top="0" tabpos="2">
+		<Cursor position="251" topLine="0" />
+	</File>
 	<File name="include/Daemon.h" open="0" top="0" tabpos="0">
 		<Cursor position="136" topLine="0" />
 	</File>
@@ -9,9 +12,6 @@
 	</File>
 	<File name="include/io/Worker.h" open="0" top="0" tabpos="0">
 		<Cursor position="679" topLine="0" />
-	</File>
-	<File name="include/lib/eos/MacTableManager.h" open="1" top="0" tabpos="2">
-		<Cursor position="94" topLine="0" />
 	</File>
 	<File name="include/lib/openFlow1_0/OpenFlowHeader.h" open="0" top="0" tabpos="0">
 		<Cursor position="163" topLine="0" />
@@ -30,9 +30,6 @@
 	</File>
 	<File name="src/io/Worker.cpp" open="0" top="0" tabpos="0">
 		<Cursor position="1022" topLine="0" />
-	</File>
-	<File name="src/lib/eos/MacTableManager.cpp" open="1" top="1" tabpos="1">
-		<Cursor position="148" topLine="0" />
 	</File>
 	<File name="src/lib/openFlow1_0/OpenFlowHeader.cpp" open="0" top="0" tabpos="0">
 		<Cursor position="131" topLine="0" />
