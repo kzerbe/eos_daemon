@@ -2,7 +2,6 @@
 
 MacTableManager::MacTableManager()
 {
-    var
 }
 
 MacTableManager::~MacTableManager()
