@@ -1,10 +1,8 @@
 #ifndef SESSIONHANDLER_H
 #define SESSIONHANDLER_H
 
-#include <cstring>
 #include <eos/fd.h>
 #include <eos/tracing.h>
-
 
 
 class SessionHandler : public eos::fd_handler
@@ -19,6 +17,7 @@ class SessionHandler : public eos::fd_handler
 
     protected:
         virtual void OnMessage(const char* message, size_t length) = 0;
+        virtual void OnConnect() = 0;
         virtual void OnConnectionClosed() = 0;
 
         virtual void on_readable(int notifyingFd);
@@ -26,7 +25,6 @@ class SessionHandler : public eos::fd_handler
 
 
     private:
-        void SendHello();
         void DrainReadBuffer();
         int SendData(const char* buf, size_t length);
         int FindNextMessageBreak(const char* buffer, size_t length);

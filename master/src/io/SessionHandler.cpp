@@ -3,12 +3,9 @@
 #include <unistd.h>
 #include <sys/socket.h>
 #include <errno.h>
+#include <cstring>
 
 #include "io/SessionHandler.h"
-#include "lib/openFlow1_0/OpenFlowHeader.h"
-
-
-using namespace OpenFlow;
 
 SessionHandler::SessionHandler(size_t bufferSize)
     : m_bufferSize(bufferSize)
@@ -43,8 +40,7 @@ void SessionHandler::WatchStream(int socketDescriptor, bool doWatch)
         m_writeBuffer = new char[m_bufferSize];
         m_bytesRead = 0;
         m_bytesToWrite = 0;
-        SendHello();
-        SetNextMessageLength(OpenFlowHeaderSize);
+        OnConnect();
     }
     else if (m_fd != 0)
     {
@@ -233,12 +229,5 @@ void SessionHandler::on_writable(int notifyingSocket)
    }
 
    m_bytesToWrite = bytesRemaining;
-}
-
-void  SessionHandler::SendHello()
-{
-    std::string packet;
-    OpenFlowHeader::CreatePacket(packet, OfpType::OFPT_HELLO);
-    SendMessage(packet.data(), packet.length());
 }
 

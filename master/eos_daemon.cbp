@@ -44,6 +44,7 @@
 		<Unit filename="include/io/Listener.h" />
 		<Unit filename="include/io/SessionHandler.h" />
 		<Unit filename="include/io/Worker.h" />
+		<Unit filename="include/lib/eos/MacTableManager.h" />
 		<Unit filename="include/lib/openFlow1_0/OpenFlowHeader.h" />
 		<Unit filename="include/lib/openFlow1_0/types.h" />
 		<Unit filename="include/lib/openFlow1_0/util.h" />
@@ -54,6 +55,7 @@
 		<Unit filename="src/io/Listener.cpp" />
 		<Unit filename="src/io/SessionHandler.cpp" />
 		<Unit filename="src/io/Worker.cpp" />
+		<Unit filename="src/lib/eos/MacTableManager.cpp" />
 		<Unit filename="src/lib/openFlow1_0/OpenFlowHeader.cpp" />
 		<Extensions>
 			<code_completion />

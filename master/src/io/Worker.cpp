@@ -29,6 +29,12 @@ void Worker::OnMessage(const char* message, size_t length)
     OpenFlowHeader::ParsePacket(msg, m_state);
 }
 
+void Worker::OnConnect()
+{
+    SendHello();
+    SetNextMessageLength(OpenFlowHeaderSize);
+}
+
 void Worker::OnConnectionClosed()
 {
     m_t.trace0("connection closed");
@@ -41,3 +47,11 @@ void Worker::on_timeout()
     m_t.trace0("timed out");
     m_parent->OnWorkerComplete(m_fd);
 }
+
+void  Worker::SendHello()
+{
+    std::string packet;
+    OpenFlowHeader::CreatePacket(packet, OfpType::OFPT_HELLO);
+    SendMessage(packet.data(), packet.length());
+}
+
