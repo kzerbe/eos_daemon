@@ -5,7 +5,7 @@
 Daemon::Daemon(eos::sdk& sdk, int serverPort, int serverBacklog)
     : agent_handler(sdk.get_agent_mgr()),
       Listener(serverPort, serverBacklog),
-      m_t("MacTableDaemon"),
+      m_t("Daemon"),
       m_workers(),
       m_sdk(sdk)
 {

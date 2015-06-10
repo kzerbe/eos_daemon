@@ -4,7 +4,6 @@
 #include <cstring>
 
 #include "configuration.h"
-
 #include "lib/openFlow1_0/OpenFlowHeader.h"
 
 using namespace OpenFlow;
